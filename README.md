@@ -141,3 +141,5 @@ This project implements a battle bot control system using Object-Oriented Progra
 
 ## Safety Notes
 ⚠️ **Handle lithium-ion batteries with care.** Always use proper discharge procedures and avoid short circuits.
+
+** Ai handled the style for the outputs and accepting key readings from the keyboard
