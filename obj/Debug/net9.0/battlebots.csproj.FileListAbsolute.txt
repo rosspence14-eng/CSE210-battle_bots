@@ -1,0 +1,15 @@
+C:\Hidden Desktop\Battle_Bots\CSE210-battle_bots\bin\Debug\net9.0\battlebots.exe
+C:\Hidden Desktop\Battle_Bots\CSE210-battle_bots\bin\Debug\net9.0\battlebots.deps.json
+C:\Hidden Desktop\Battle_Bots\CSE210-battle_bots\bin\Debug\net9.0\battlebots.runtimeconfig.json
+C:\Hidden Desktop\Battle_Bots\CSE210-battle_bots\bin\Debug\net9.0\battlebots.dll
+C:\Hidden Desktop\Battle_Bots\CSE210-battle_bots\bin\Debug\net9.0\battlebots.pdb
+C:\Hidden Desktop\Battle_Bots\CSE210-battle_bots\obj\Debug\net9.0\battlebots.GeneratedMSBuildEditorConfig.editorconfig
+C:\Hidden Desktop\Battle_Bots\CSE210-battle_bots\obj\Debug\net9.0\battlebots.AssemblyInfoInputs.cache
+C:\Hidden Desktop\Battle_Bots\CSE210-battle_bots\obj\Debug\net9.0\battlebots.AssemblyInfo.cs
+C:\Hidden Desktop\Battle_Bots\CSE210-battle_bots\obj\Debug\net9.0\battlebots.csproj.CoreCompileInputs.cache
+C:\Hidden Desktop\Battle_Bots\CSE210-battle_bots\obj\Debug\net9.0\battlebots.sourcelink.json
+C:\Hidden Desktop\Battle_Bots\CSE210-battle_bots\obj\Debug\net9.0\battlebots.dll
+C:\Hidden Desktop\Battle_Bots\CSE210-battle_bots\obj\Debug\net9.0\refint\battlebots.dll
+C:\Hidden Desktop\Battle_Bots\CSE210-battle_bots\obj\Debug\net9.0\battlebots.pdb
+C:\Hidden Desktop\Battle_Bots\CSE210-battle_bots\obj\Debug\net9.0\battlebots.genruntimeconfig.cache
+C:\Hidden Desktop\Battle_Bots\CSE210-battle_bots\obj\Debug\net9.0\ref\battlebots.dll
