@@ -27,7 +27,12 @@ namespace battlebots
         /// Used to distinguish between multiple actuators of the same type
         /// (e.g., left motor vs right motor, or different weapons).
         /// </summary>
-        string Id { get; set; }
+        string _npId { get; set; }
+
+        /// <summary>
+        /// Indicates whether the actuator is currently active.
+        /// </summary>
+        bool _npIsActive { get; }
 
         /// <summary>
         /// Powers on or enables the actuator.

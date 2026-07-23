@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 3,
   "targets": {
     "net9.0": {}
   },
@@ -8,19 +8,19 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\rossp\\.nuget\\packages\\": {}
+    "C:\\Users\\nparr\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Hidden Desktop\\Battle_Bots\\CSE210-battle_bots\\battlebots.csproj",
+      "projectUniqueName": "C:\\Users\\nparr\\Losing_is_FUN\\CSE210-battle_bots\\battlebots.csproj",
       "projectName": "battlebots",
-      "projectPath": "C:\\Hidden Desktop\\Battle_Bots\\CSE210-battle_bots\\battlebots.csproj",
-      "packagesPath": "C:\\Users\\rossp\\.nuget\\packages\\",
-      "outputPath": "C:\\Hidden Desktop\\Battle_Bots\\CSE210-battle_bots\\obj\\",
+      "projectPath": "C:\\Users\\nparr\\Losing_is_FUN\\CSE210-battle_bots\\battlebots.csproj",
+      "packagesPath": "C:\\Users\\nparr\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nparr\\Losing_is_FUN\\CSE210-battle_bots\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\rossp\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\nparr\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -30,7 +30,6 @@
       },
       "frameworks": {
         "net9.0": {
-          "framework": "net9.0",
           "targetAlias": "net9.0",
           "projectReferences": {}
         }
@@ -45,11 +44,10 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "10.0.300"
+      "SdkAnalysisLevel": "10.0.200"
     },
     "frameworks": {
       "net9.0": {
-        "framework": "net9.0",
         "targetAlias": "net9.0",
         "imports": [
           "net461",
@@ -65,19 +63,19 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[9.0.17, 9.0.17]"
+            "version": "[9.0.15, 9.0.15]"
           },
           {
             "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[9.0.17, 9.0.17]"
+            "version": "[9.0.15, 9.0.15]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[9.0.17, 9.0.17]"
+            "version": "[9.0.15, 9.0.15]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[9.0.17, 9.0.17]"
+            "version": "[9.0.15, 9.0.15]"
           }
         ],
         "frameworkReferences": {
@@ -85,7 +83,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

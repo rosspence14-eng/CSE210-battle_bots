@@ -46,7 +46,7 @@ namespace battlebots
             _isCharging_RP = false;
             _attackCooldown_RP = false;
             _attackCount_RP = 0;
-            Id = "WEAPON-DEFAULT";
+            _npId = "WEAPON-DEFAULT";
 
             Console.WriteLine("[WEAPON] Base weapon system initialized");
         }
@@ -58,13 +58,13 @@ namespace battlebots
         /// <param name="damageOutput_RP">Damage potential of the weapon</param>
         public Weapon(string id_RP, int damageOutput_RP)
         {
-            Id = id_RP;
+            _npId = id_RP;
             _damageOutput_RP = damageOutput_RP;
             _isCharging_RP = false;
             _attackCooldown_RP = false;
             _attackCount_RP = 0;
 
-            Console.WriteLine($"[WEAPON] Weapon initialized: ID={Id}, Damage={_damageOutput_RP}%");
+            Console.WriteLine($"[WEAPON] Weapon initialized: ID={_npId}, Damage={_damageOutput_RP}%");
         }
 
         /// <summary>
@@ -205,7 +205,7 @@ namespace battlebots
         public virtual void DisplayWeaponInfo()
         {
             Console.WriteLine("[WEAPON] === Weapon Status Report ===");
-            Console.WriteLine($"[WEAPON] ID: {Id}");
+            Console.WriteLine($"[WEAPON] ID: {_npId}");
             Console.WriteLine($"[WEAPON] Type: {GetType().Name}");
             Console.WriteLine($"[WEAPON] Damage Output: {_damageOutput_RP}%");
             Console.WriteLine($"[WEAPON] Charging: {_isCharging_RP}");
@@ -220,7 +220,7 @@ namespace battlebots
         public override void Activate()
         {
             base.Activate();
-            Console.WriteLine($"[WEAPON] Weapon {Id} ACTIVATED and ready for combat");
+            Console.WriteLine($"[WEAPON] Weapon {_npId} ACTIVATED and ready for combat");
         }
 
         /// <summary>
@@ -233,7 +233,7 @@ namespace battlebots
             _attackCooldown_RP = false;
 
             base.Deactivate();
-            Console.WriteLine($"[WEAPON] Weapon {Id} DEACTIVATED");
+            Console.WriteLine($"[WEAPON] Weapon {_npId} DEACTIVATED");
         }
     }
 }

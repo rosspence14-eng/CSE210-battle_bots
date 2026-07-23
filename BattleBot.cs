@@ -119,7 +119,7 @@ namespace battlebots
 
             StopBattle();
 
-            _battery_RP.ChargeLevel -= 0.5; // Minimal drain from shutdown process
+            _battery_RP.ChargeLevel = Math.Max(0, _battery_RP.ChargeLevel - 0.5); // Minimal drain from shutdown process
             Console.WriteLine("[BOT] Power conservation mode engaged");
             Console.WriteLine($"[BOT] Final Battery Charge: {_battery_RP.ChargeLevel:F1}%");
             Console.WriteLine("[BOT] === SYSTEM SHUTDOWN COMPLETE ===\n");

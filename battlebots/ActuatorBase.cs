@@ -3,9 +3,9 @@ using System;
 namespace battlebots
 {
     /*--------------------------------------------
-    parameeters:
+    parameters:
         Id (string): Unique identifier for the actuator component
-    funtion:
+    function:
         Abstract base class providing standard functionality for all actuators in the system
         Implements IActuator interface to define common actuator behavior
         Activate(): Virtual method to power on/enable the actuator
@@ -16,9 +16,23 @@ namespace battlebots
     ---------------------------------------------*/
     public abstract class ActuatorBase : IActuator
     {
-        public string Id { get; set; }
+        public string _npId { get; set; } = "DefaultActuatorId";
+        public bool _npIsActive { get; protected set; }
 
-        public virtual void Activate() { }
-        public virtual void Deactivate() { }
+        public virtual string _npUniqueId
+        {
+            get => _npId;
+            set => _npId = value;
+        }
+
+        public virtual void Activate()
+        {
+            _npIsActive = true;
+        }
+
+        public virtual void Deactivate()
+        {
+            _npIsActive = false;
+        }
     }
 }

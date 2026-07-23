@@ -21,7 +21,7 @@ namespace battlebots
     public class Motor : ActuatorBase
     {
         // The rotation speed of the motor as a percentage (0-100)
-        public int Speed { get; set; }
+        public int _npSpeed { get; set; }
 
         // Tracks if the motor is currently active and spinning
         private bool _isRunning_RP;
@@ -31,9 +31,9 @@ namespace battlebots
         /// </summary>
         public Motor()
         {
-            Speed = 0;
+            _npSpeed = 0;
             _isRunning_RP = false;
-            Id = "MOTOR-UNKNOWN";
+            _npId = "MOTOR-UNKNOWN";
 
             Console.WriteLine($"[MOTOR] Motor instance created (ID will be assigned)");
         }
@@ -44,11 +44,11 @@ namespace battlebots
         /// <param name="motorId_RP">Unique identifier for this motor</param>
         public Motor(string motorId_RP)
         {
-            Speed = 0;
+            _npSpeed = 0;
             _isRunning_RP = false;
-            Id = motorId_RP;
+            _npId = motorId_RP;
 
-            Console.WriteLine($"[MOTOR] Motor initialized: ID={Id}");
+            Console.WriteLine($"[MOTOR] Motor initialized: ID={_npId}");
         }
 
         /// <summary>
@@ -57,13 +57,14 @@ namespace battlebots
         /// </summary>
         public override void Activate()
         {
+            base.Activate();
             _isRunning_RP = true;
-            Speed = 0; // Start at zero speed for safety
+            _npSpeed = 0; // Start at zero speed for safety
 
-            Console.WriteLine($"[MOTOR] {Id} ACTIVATED");
-            Console.WriteLine($"[MOTOR] {Id} Motor controller ONLINE");
-            Console.WriteLine($"[MOTOR] {Id} Ready to accept speed commands");
-            Console.WriteLine($"[MOTOR] {Id} Current Speed: {Speed}%");
+            Console.WriteLine($"[MOTOR] {_npId} ACTIVATED");
+            Console.WriteLine($"[MOTOR] {_npId} Motor controller ONLINE");
+            Console.WriteLine($"[MOTOR] {_npId} Ready to accept speed commands");
+            Console.WriteLine($"[MOTOR] {_npId} Current Speed: {_npSpeed}%");
         }
 
         /// <summary>
@@ -73,13 +74,14 @@ namespace battlebots
         public override void Deactivate()
         {
             // Safety: Ensure speed is zero before powering down
-            Speed = 0;
+            _npSpeed = 0;
 
             _isRunning_RP = false;
+            base.Deactivate();
 
-            Console.WriteLine($"[MOTOR] {Id} DEACTIVATED");
-            Console.WriteLine($"[MOTOR] {Id} Motor stopped (Speed: {Speed}%)");
-            Console.WriteLine($"[MOTOR] {Id} Controller OFFLINE");
+            Console.WriteLine($"[MOTOR] {_npId} DEACTIVATED");
+            Console.WriteLine($"[MOTOR] {_npId} Motor stopped (Speed: {_npSpeed}%)");
+            Console.WriteLine($"[MOTOR] {_npId} Controller OFFLINE");
         }
 
         /// <summary>
@@ -91,22 +93,22 @@ namespace battlebots
             // Validate speed range
             if (speed_RP < 0 || speed_RP > 100)
             {
-                Console.WriteLine($"[MOTOR] {Id} WARNING: Speed {speed_RP}% out of valid range (0-100)!");
+                Console.WriteLine($"[MOTOR] {_npId} WARNING: Speed {speed_RP}% out of valid range (0-100)!");
                 speed_RP = Math.Max(0, Math.Min(100, speed_RP));
             }
 
-            int previousSpeed_RP = Speed;
-            Speed = speed_RP;
+            int previousSpeed_RP = _npSpeed;
+            _npSpeed = speed_RP;
 
-            Console.WriteLine($"[MOTOR] {Id} Speed changed: {previousSpeed_RP}% -> {Speed}%");
+            Console.WriteLine($"[MOTOR] {_npId} Speed changed: {previousSpeed_RP}% -> {_npSpeed}%");
 
-            if (Speed == 0)
+            if (_npSpeed == 0)
             {
-                Console.WriteLine($"[MOTOR] {Id} Motor STOPPED");
+                Console.WriteLine($"[MOTOR] {_npId} Motor STOPPED");
             }
             else
             {
-                Console.WriteLine($"[MOTOR] {Id} Motor running at {Speed}% power");
+                Console.WriteLine($"[MOTOR] {_npId} Motor running at {_npSpeed}% power");
             }
         }
 
@@ -124,10 +126,10 @@ namespace battlebots
         /// </summary>
         public void DisplayStatus()
         {
-            Console.WriteLine($"[MOTOR] === Motor Status: {Id} ===");
+            Console.WriteLine($"[MOTOR] === Motor Status: {_npId} ===");
             Console.WriteLine($"[MOTOR] Running: {_isRunning_RP}");
-            Console.WriteLine($"[MOTOR] Speed: {Speed}%");
-            Console.WriteLine($"[MOTOR] ID: {Id}");
+            Console.WriteLine($"[MOTOR] Speed: {_npSpeed}%");
+            Console.WriteLine($"[MOTOR] ID: {_npId}");
             Console.WriteLine("[MOTOR] ===========================");
         }
     }
